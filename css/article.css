@@ -1,0 +1,233 @@
+/*article css*/
+
+#top-buttons { width: 80%; margin: 0 10%;}
+#mail-top { text-align: center; }
+#share {
+    background-color: #ef7f0a;
+    border-top: 2px solid #fcc151;
+    border-left: 2px solid #fcc151;
+    border-bottom: 2px solid #df5b00;
+    border-right: 2px solid #df5b00;
+    border-radius: 15px 15px;
+    color: white;
+    font-family:'roboto',sans-serif;
+    font-weight:bold;
+    text-align:center;
+    padding: 3em;
+    width: 80%;
+    margin: 2em 10% 1em;
+}
+
+#speaker img { float:left; }
+
+#share h1 {
+    font-size: 1.65em;
+    line-height: 1em;
+    text-align: left;
+    padding-left:3em;
+}
+
+#social-icons {
+    padding-top:1em;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.visible { display:initial; }
+.hidden { display:none; }
+#logo img {padding:1em;}
+#greenDiv { background-color: #98ac36; color: #fff; font-family: "Halant"; font-weight: 500; font-size: 26px; line-height: 1em;padding:1em 1em 3em;}
+#greenDiv h3 {
+font-size: 2em;
+font-family: halant;
+font-weight: 500;
+}
+#greenDiv p { font-size: 30px; }
+.green-bg { background-color:green; }
+.gray-bg { background-color:#4c4c4c; }
+.orange-bg { background-color:#ef7f0a; }
+#orangeDiv {
+    color:white;
+    border-radius:0px 50px 0px 50px;
+    border-top: 2px solid #fcc151;
+    border-left: 2px solid #fcc151;
+    border-bottom:2px solid #df5b00;
+    border-right:2px solid #df5b00;
+}
+#SignUp {margin-top:1.5em; padding-left: 1em;}
+#SignUp h2 {font-family:"Halant"; font-weight:500; font-size:3em; padding-top:.5em}
+#arrow { max-width:40%; padding-bottom: 1em;}
+.town-hall-logo { text-align:center; }
+#footer {bottom:0; font-family:"roboto",sans-serif; color:white;}
+.hidden-content-article {top:-5em; position:relative; margin-bottom:-5em; padding:1em;}
+.landing-form-article {top:-6em; position:relative; margin-bottom:-5em; padding:1em;}
+#content-footer { padding:1em 0;}
+#shineon-logo { padding:1em; }
+#social-media { padding:1em; }
+#errata div { display:inline-block; }
+#errata a { color:inherit; text-decoration:underline; }
+.shine-on { max-width:50%; }
+
+/*foundation overrides*/
+p { margin-bottom:.5em; font-size:19px;}
+h3 { line-height: 1em; }
+
+/*formstack overides*/
+.fsBody .fsForm input.fsField[type=text]{width:100% !important}
+.fsSection .fsRowBody {padding:0 !important;}
+.fsRowBody input[type=email] {max-width: 100% !important;}
+.fsBody .fsForm input[type=email].fsField { margin-bottom: 1.5em; }
+.fsRowBody input[type=text] { max-width: 100% !important;}
+.fsBody .fsForm input[type=text].fsField { margin-bottom:1.5em; }
+.fsBody .fsForm .fsOptionLabel {color:white !important; margin-bottom:.5em;}
+.fsBody .fsForm select.fsField { width:100% !important;}
+.fsBody .fsForm .fsFieldCell { margin-bottom:1.5em; }
+.fsBody .fsForm .fsOptionLabel { font-size:1em; margin-bottom:1em; }
+.fsBody .fsForm .fsLabel { font-size:1em; }
+.fsSubmitButton {width: 85% !important; padding-top: 2em !important; }
+#fsForm2344676 { padding-left:15% !important; }
+.fsBody .fsForm .fsSection img { text-align:center !important; position:relative; }
+label.fsOptionLabel {border:none !important;}
+.fsFieldFocused {color:none;}
+.fsForm fieldset {margin-bottom:1.5em !important;}
+.fsBody .fsForm .fsLabel {padding-bottom:1em !important;}
+.fsFieldFocused {background-color: transparent !important; }
+#orangeDiv select {
+    background-color: white !important;
+    margin-bottom: 2em;
+    width: 85%;
+    color: gray;
+    text-align: center !important;
+    font-size: 19px !important;
+    font-weight: bold !important;
+    color: #9f9f9f;
+    border: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../images/dropdown.png") no-repeat;
+    background-position: 90% 50%;
+    background-size: 15px 15px;
+}
+
+    }}
+/*popup*/
+.button:hover {
+  background: $darkOrange;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:1;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 25px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  z-index:9999;
+  height:90vh;
+  img {width:60%;}
+}
+
+ #errata-policy a { color: white; }
+ .townhallfooterp a { color:white; }
+
+.popup .content a { color: #e57500; }
+.popup h2 {
+  margin-top: 0;
+  color: #4c4c4c;
+  font-family: $headlines;
+  font-weight:bold;
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #e57500;
+}
+
+.popup .close:hover {
+  color: #e57500;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  text-align:center;
+  font-family:'Roboto',sans-serif;
+  color:black;
+  height:auto;
+  max-height: 40vh;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    margin-left: 0;
+  }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    #SignUp { margin-top: .8em; }
+    #SignUp h2 { font-size: 1.7em !important; }
+    #arrow { max-width: 35%; }
+    .article-container h3, p, img {text-align: center;}
+    .article-container h3 { color: #3c723c; font-weight: bold;}
+    .blog-imagry { width: 70%; padding:1em; margin:2em 0 2em 0; display: block; text-align: center; margin: 0 auto;}
+
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+
+    .article-container h3, p, {text-align: left;}
+    .whiteDivArticleSuccess .blog-imagry { width: 50%; padding: 1em;}
+    .article-container h3 { color: #3c723c; font-weight: bold;}
+    .popup .content { text-align:left !important; }
+
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .article-container h3 { padding-top: 1em; }
+    .whiteDivArticleSuccess .blog-imagry { width:30%; }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

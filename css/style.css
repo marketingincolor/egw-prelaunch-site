@@ -1,0 +1,628 @@
+@charset "UTF-8";
+/*
+ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûê    ΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûê   ΓûêΓûêΓûêΓûêΓûêΓûê  ΓûêΓûêΓûêΓûêΓûêΓûê  ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûê    ΓûêΓûê     ΓûêΓûê     ΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûê      ΓûêΓûê      ΓûêΓûêΓûê    ΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+ΓûêΓûê      ΓûêΓûê    ΓûêΓûê ΓûêΓûê      ΓûêΓûê   ΓûêΓûê ΓûêΓûê       ΓûêΓûê   ΓûêΓûê ΓûêΓûê      ΓûêΓûê      ΓûêΓûêΓûêΓûê   ΓûêΓûê     ΓûêΓûê     ΓûêΓûê ΓûêΓûê      ΓûêΓûê      ΓûêΓûê      ΓûêΓûêΓûêΓûê   ΓûêΓûê ΓûêΓûê      ΓûêΓûê      ΓûêΓûê
+ΓûêΓûêΓûêΓûêΓûê   ΓûêΓûê    ΓûêΓûê ΓûêΓûêΓûêΓûêΓûê   ΓûêΓûêΓûêΓûêΓûêΓûê  ΓûêΓûê   ΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûê  ΓûêΓûêΓûêΓûêΓûê   ΓûêΓûêΓûêΓûêΓûê   ΓûêΓûê ΓûêΓûê  ΓûêΓûê     ΓûêΓûê  Γûê  ΓûêΓûê ΓûêΓûêΓûêΓûêΓûê   ΓûêΓûê      ΓûêΓûê      ΓûêΓûê ΓûêΓûê  ΓûêΓûê ΓûêΓûêΓûêΓûêΓûê   ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+ΓûêΓûê       ΓûêΓûê  ΓûêΓûê  ΓûêΓûê      ΓûêΓûê   ΓûêΓûê ΓûêΓûê    ΓûêΓûê ΓûêΓûê   ΓûêΓûê ΓûêΓûê      ΓûêΓûê      ΓûêΓûê  ΓûêΓûê ΓûêΓûê     ΓûêΓûê ΓûêΓûêΓûê ΓûêΓûê ΓûêΓûê      ΓûêΓûê      ΓûêΓûê      ΓûêΓûê  ΓûêΓûê ΓûêΓûê ΓûêΓûê           ΓûêΓûê      ΓûêΓûê
+ΓûêΓûêΓûêΓûêΓûêΓûêΓûê   ΓûêΓûêΓûêΓûê   ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûê   ΓûêΓûê  ΓûêΓûêΓûêΓûêΓûêΓûê  ΓûêΓûê   ΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûê   ΓûêΓûêΓûêΓûê      ΓûêΓûêΓûê ΓûêΓûêΓûê  ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûê   ΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+*/
+/*
+Project Name: egw-prelaunch-landers
+Author: Marketing In Color
+Author URI: http://marketingincolor.com/
+Description: This is a BASELINE Landing Page built with Skelaton. The folder
+also includes landing pages for town hall events, and forms that gate content
+until submission.This landing page relies on SASS and uses a mobile-first
+approach for depending on those set in sass/media_query.
+Version: 1.0
+*/
+/*
+stylesheet/
+|
+|-- modules/                         # Common modules
+|   |-- _misc.scss                   # Parted from original sass doc
+|   |-- _misc2.scss                  # Parted from original sass doc
+|   |-- _typography.scss             # Fonts
+|   |-- _colors.scss                 # Layout Colors
+|   |-- _skelaton_overides.scss      # Boilerplate Overides
+|   |-- _basic_structure.scss        # Parted from original sass doc
+|   |-- _formstack.scss              # Where Formstack stuff lives
+|   |-- _form_interactions.scss      # Form Highlight Colors
+|   |-- _youtube.scss                # Provides responsive youtube videos
+|   |-- _privacy_policy.scss         # Privacy Policy
+|
+|   ...
+|
+|-- partials/             # Partials
+|   |-- _orangeDiv.sass   # imports the orange div (form)
+|   |-- _greenDiv.sass    # imports the green div (banner)
+|   |-- _whiteDiv.sass    # imports the white div (video)
+|   |-- _footer.sass      # imports the site footer
+|
+|   ...
+|
+|-- vendor/               # CSS or Sass from other projects
+|
+|   ...
+|
+`-- style.scss            # primary Sass file (Hint: you are here)
+
+*/
+input[type=text], textarea { -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #DDDDDD; }
+
+input[type=text]:focus, textarea:focus { box-shadow: 0 0 10px #3a7d3b; padding: 100px 100px 100px 100px 100px; margin: 5px 1px 3px 0px; border: 10px solid #3a7d3b; }
+
+input[type=email], textarea { -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #DDDDDD; }
+
+input[type=email]:focus, textarea:focus { box-shadow: 0 0 10px #3a7d3b; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 10px solid #3a7d3b; }
+
+select:focus { outline: none; padding: px 0px px px; margin: px px px px; border: 1px solid #DDDDDD; }
+
+.img100 { max-width: 75% !important; height: initial !important; margin: 0 auto !important; position: 0 !important; right: 0em !important; }
+
+.pushdowns { padding-top: .5em; }
+
+.bottom { bottom: 0px !important; }
+
+#hiddenContent { position: relative; z-index: -1; }
+
+/*Landing Page Form Design For Hidden Content*/
+#landingForm { padding-left: 13em; }
+
+#fsForm2360092 { -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75); box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75); }
+
+.fsBody .fsForm .fsOptionLabel { font-family: 'roboto',sans-serif !important; }
+
+/*Top Box*/
+.fsBody .fsSectionHeader { background-color: #f99d3e !important; color: #fff !important; }
+.fsBody .fsSectionHeader h2 { color: white !important; }
+
+#label42405281 legend span { font-size: 1.9rem; color: white; font-family: roboto,sans-serif; }
+
+/* iPad Success Overlay */
+.ipad-overlay { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(153, 153, 153, 0.6); z-index: 10; }
+
+/* iPad Modal Overlay*/
+.modal { width: 300px; color: white; font-family: 'roboto',sans-serif; font-size: 2.8rem; height: 200px; position: fixed; top: 50%; left: 50%; margin-top: -100px; margin-left: -150px; background-color: rgba(51, 51, 51, 0.95); border-radius: 5px; text-align: center; z-index: 11; /* 1px higher than the overlay layer */ }
+
+.modal h3 { color: white; margin-bottom: 0em !important; padding-top: 1em; letter-spacing: 0.09em; font-size: 1.5em; }
+
+h1 { color: black; }
+
+h2 { color: white; }
+
+h3 { color: blue; }
+
+a { color: #fff; text-decoration: underline; }
+
+.content p a { color: #e57500 !important; }
+
+p { margin-bottom: 1rem; margin-top: 1rem; }
+
+hr { background-color: white; margin-bottom: 0; margin-top: 0; width: 50%; }
+
+@media (min-width: 400px) { .container { width: 100%; } }
+@media (min-width: 550px) { .column, .columns { /* margin-left: 4%; */ margin-left: 0 !important; } }
+input[type="text"] { border-radius: 0 !important; }
+
+input[type="email"] { border-radius: 0 !important; }
+
+select { border-radius: 0 !important; }
+
+.container { margin: 0 auto; padding: 0 !important; min-height: 100%; margin-bottom: -30px; }
+
+.container:after { content: ""; display: block; }
+
+#logo { text-align: center; padding: 1em; }
+#logo img { max-width: 100%; width: 80%; }
+
+.fsBody .fsForm .fsCell { background-color: transparent !important; border-top-right-radius: 50px !important; }
+
+.fsboxshadow .fsBody .fsForm { background-color: transparent !important; }
+
+fsBody { border-top-right-radius: 50px; }
+
+.fsBody .fsForm .fsOptionLabel { text-align: left; background-color: transparent !important; border-color: transparent !important; font-size: 16px !important; color: #fff !important; }
+
+.fsBody .fsRowBody { padding: initial !important; }
+
+.fsPagination { margin: -10px 0 !important; }
+
+.fsBody .fsForm input[type=email].fsField { margin-bottom: 2em; }
+
+.fsRowBody input[type=text] { display: block; width: 85% !important; font-size: 1.5em; }
+
+.fsRowBody input[type=checkbox].vertical { background-color: #e57500; width: 10% !important; height: 20px !important; }
+
+.fsborderradius .fsForm .fsSubmit { width: 65%; margin: 0 auto !important; }
+
+.fsRowBody input[type=text] { background-image: none !important; }
+
+.fsBody .fsForm .fsOptionLabel { margin: 0em; }
+
+.fsField { background-color: white !important; }
+
+.fsField option:hover { background-color: orange !important; color: white !important; }
+
+.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; margin-left: 0; }
+
+.video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+#greenDivSuccess { background-color: #98ac36; color: #fff; font-family: "Halant"; font-weight: bold; font-size: 26px; padding: 1em; position: relative; }
+#greenDivSuccess h4 { font-family: "Halant"; font-size: 26px; text-align: center; width: 100%; margin: 0 auto; }
+#greenDivSuccess p { font-family: "Roboto", sans-serif; font-size: 19px; text-align: center; font-size: 19px; }
+
+#whiteDivSuccess { margin: 0em; }
+#whiteDivSuccess p { font-family: 'roboto', sans-serif; font-size: 1.5em; color: #4c4c4c; text-align: center; font-weight: 600; padding-left: 10%; padding-right: 10%; padding-top: 1em; padding-bottom: 2em; }
+#whiteDivSuccess img { max-width: 100%; }
+
+#greenDivLargeOnly { display: none; }
+
+.button:hover { background: #e57500; }
+
+.overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0; z-index: 1; }
+
+.overlay:target { visibility: visible; opacity: 1; }
+
+.popup { margin: 25px auto; padding: 20px; background: #fff; border-radius: 5px; width: 30%; position: relative; z-index: 9999; }
+.popup img { width: 60%; }
+
+.popup h2 { margin-top: 0; color: #4c4c4c; font-family: "Halant"; font-weight: bold; text-align: center; }
+
+.popup .close { position: absolute; top: -10px; right: 8px; transition: all 200ms; font-size: 30px; font-weight: bold; text-decoration: none; color: #333; }
+
+.popup .close:hover { color: #e57500; }
+
+.popup .content { max-height: 30%; overflow: auto; text-align: center; font-family: 'Roboto',sans-serif; }
+
+/* Popup Box Media Query
+ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+@media screen and (max-width: 700px) { .box { width: 70%; }
+  .popup { width: 70%; height: 100vh; }
+  .popup .content { text-align: center; font-size: 19px; max-height: 100vh; overflow: auto; }
+  .overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0; z-index: 1; height: 190vh; } }
+#orangeDiv { background-image: url("../images/orangeDiv.png"); width: 90%; position: relative; top: 0em; color: #fff; font-family: "Roboto", sans-serif; font-weight: bold; text-align: center; border-top-right-radius: 50px; border-bottom-left-radius: 50px; margin: 1em; z-index: 0; height: 38em; }
+#orangeDiv input { width: 10%; }
+#orangeDiv .fsSubmitButton { width: 75%; margin-bottom: -1.5em; padding-top: .5em !important; position: relative; top: .5em; }
+#orangeDiv h2 { font-family: "Halant"; font-weight: 600; text-align: left; padding-top: .5em; float: left; padding-left: 2.5rem; font-size: 3.8rem; }
+#orangeDiv img { height: 45px; padding-top: 1em; display: block; padding-left: 2em; }
+#orangeDiv a { display: none; }
+#orangeDiv .button, #orangeDiv button, #orangeDiv input[type="text"] { text-align: center; width: 90%; margin: 0 auto; margin-bottom: 1.5em; }
+#orangeDiv .fsBody .fsForm input[type=email].fsField { font-size: 19px; text-align: center; width: 85% !important; margin: 0 auto; margin-bottom: 1.5em; }
+#orangeDiv .button, #orangeDiv button, #orangeDiv input[type="submit"] { color: #fff; border-color: transparent; font-size: 2.4rem; text-transform: none; height: 70px; width: 90%; }
+#orangeDiv select { background-color: white !important; margin-bottom: 2em; width: 85%; color: gray; text-align: center !important; font-size: 19px !important; font-weight: bold !important; color: #9f9f9f; border: 0 !important; /*Removes border*/ -webkit-appearance: none; /*Removes default chrome and safari style*/ -moz-appearance: none; /*Removes default style Firefox*/ background: url("../images/dropdown.png") no-repeat; background-position: 90% 50%; background-size: 15px 15px; }
+#orangeDiv input { color: #4c4c4c; text-align: center; }
+#orangeDiv .greenGradient { background: #bfd255; background: -moz-linear-gradient top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%; background: -webkit-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); background: linear-gradient to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%; }
+
+#greenDiv { background-color: #98ac36; color: #fff; font-family: "Halant"; font-weight: bold; font-size: 26px; padding: 1em; position: relative; }
+#greenDiv h4 { font-family: "Halant"; font-size: 3.8rem; text-align: center; line-height: 1em; font-weight: 500; margin-bottom: 1.6rem !important; }
+#greenDiv p { font-family: "Roboto", sans-serif; font-size: 19px; text-align: center; line-height: 25px; font-weight: 500; padding-bottom: 1em; }
+
+#greenDivSmall .greenDivTownHall { height: 12em; }
+
+#greenDivSmall #hideLarge { display: initial !important; }
+
+/*Switch Lady Image*/
+#Big { display: none !important; }
+
+#whiteDiv { margin: 1em; position: relative; top: 0em; padding-top: 0em; padding-bottom: 1em; }
+#whiteDiv h4 { margin-top: 6rem; font-family: "Halant"; font-size: 26px; font-weight: 500; text-align: center; color: #3c723c; margin-right: 1em; margin-left: 1em; }
+#whiteDiv img { text-align: center; position: relative; width: 100%; z-index: 0; }
+
+/*-- Landing Page Footer
+ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô -*/
+#footer { font-family: 'roboto',sans-serif; background-color: #4c4c4c; color: #fff; text-align: center; position: relative; width: 100%; height: 100%; bottom: 0px; padding-top: 2em; padding-bottom: 1em; margin-top: 0em; }
+
+#footer #tabletDescription { display: none; }
+
+#footer #tabletDate { display: none; }
+
+#footer #tabletPolicy { display: none; }
+
+/*-- Town Hall (Article/Video) Footer
+ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô -*/
+.footerHeight { height: 23em !important; }
+
+.shineOn { width: 70%; margin: 1em; }
+
+.townhallfooterp { font-size: 1.5em; }
+
+/*-- Town Hall (Article/Video) Success Footer
+ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô -*/
+#footerSuccess { font-weight: 300 !important; font-family: 'Roboto',sans-serif; background-color: #4c4c4c; color: #fff; text-align: center; position: relative; width: 100%; height: 10em; bottom: 0px; padding-top: 1em; padding-bottom: 1em; margin-top: 2em; }
+
+#footerSuccess #tabletDescription { display: none; }
+
+#footerSuccess #tabletDate { display: none; }
+
+#footerSuccess #tabletPolicy { display: none; }
+
+@media only screen and (min-device-width: 320px) { .visible { display: inline; }
+  .hidden { display: none; }
+  .fsBody .fsForm .fsOptionLabel { font-size: .78em !important; text-align: left; }
+  #desktopRow { display: none !important; }
+  #orangeDiv { height: 40em; top: -3em; margin-bottom: -3em; }
+  #orangeDiv h2 { padding-left: 3.5rem; }
+  #orangeDiv img { padding-left: 1em; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.7rem !important; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel:last-child { margin-bottom: 1em; margin-top: 0em; margin-bottom: 1.5em; }
+  #orangeDiv .fsSubmitButton { top: -12px; }
+  #whiteDiv h4 { margin-top: 1rem; }
+  #whiteDivSuccess div img { padding: 1em !important; max-width: 90%; }
+  .orangeDivTownHall { top: -8em !important; margin-bottom: -40em !important; }
+  .orangeDivTownHall h2 { display: none; }
+  .orangeDivTownHall #arrow { display: none !important; }
+  .orangeDivTownHall .fsBody .fsForm .fsSection { position: relative; top: 5em; }
+  .orangeDivTownHall input[type="text"] { height: 50px; }
+  .orangeDivTownHall input[type="email"] { height: 50px; }
+  .orangeDivTownHall .fsBody .fsForm select.fsField { height: 50px !important; }
+  .orangeDivTownHall { height: 45em !important; }
+  .whiteDivTownHall { top: 24em; }
+  #townHallFooter { margin-top: 0em !important; margin-bottom: -2em !important; }
+  #townHallFooter #footer { height: 100%; margin-top: 20%; }
+  #tabletRow { display: none; }
+  #footerSuccess p { margin: 1em; }
+  .popup { height: 84vh; }
+  .popup .content { max-height: 36vh; }
+  .whiteDivVideoSuccess { top: -12em !important; padding-top: 0 !important; }
+  .townHallVideoSuccess { height: 6em !important; }
+  .townHallVideoSuccessFooter { margin-top: -4em !important; }
+  #video-success { position: relative; top: -6em; margin-bottom: -5em; } }
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) { #orangeDiv { margin: 1.2em; top: -4em; height: 42em; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.9rem !important; }
+  #orangeDiv #SignUp h2 { padding-left: 6.5rem !important; }
+  #orangeDivTownHall { top: -8em !important; margin-bottom: -40em !important; }
+  #whiteDiv { padding-top: 2em; top: 26em; }
+  #whiteDiv h4 { margin-top: -47rem; }
+  .whiteDivVideoSuccess { top: -14em !important; }
+  #footer { margin-top: 17em; }
+  #townHallVideoSuccessFooter { margin-top: 0%; }
+  #footer #phoneRow { width: 80%; margin: 0 auto; }
+  #townHallFooter #footer { height: 23em; }
+  #townHallFooter #footer { height: 26em; }
+  #townhallfooterp { display: initial; }
+  .overlay { height: 180vh !important; }
+  .popup { height: 75vh !important; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) { #orangeDiv { height: 49.5em !important; } }
+@media only screen and (min-device-width: 414px) { #townHallDesktop { display: none !important; }
+  #orangeDiv { margin-top: 1.4em !important; margin-left: 1.4em !important; height: 42em; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.7rem !important; }
+  #orangeDiv #SignUp h2 { padding-left: 8.5rem !important; }
+  .orangeDivTownHall { top: -13em !important; margin-bottom: -55em !important; }
+  #whiteDiv { padding-top: 2em; }
+  #footer { margin-top: 2em; }
+  #footer #phoneRow { width: 80%; margin: 0 auto; }
+  #townHallFooter #footer { height: 100%; }
+  .popup { height: 87vh; }
+  .popup .content { height: 58vh; max-height: 50vh; }
+  #video-success { position: relative; top: -10em; margin-bottom: -10em; height: 44em; } }
+@media (min-width: 550px) { #townHallDesktop { display: none !important; }
+  h4 { font-size: 2.6rem; }
+  #orangeDiv { z-index: 1; width: 33%; float: right; padding: 2em; top: -30em; margin-bottom: -24em !important; right: 0em; margin: 0; padding-bottom: 0em; border-bottom-left-radius: 50px; border-top-right-radius: 50px; margin-right: 2rem; height: 48.5em; margin-bottom: -48.5em !important; }
+  #orangeDiv h2 { padding-bottom: 1em !important; padding-left: .5em; margin: auto; padding-bottom: 0; padding-top: 0; font-size: 2.8rem; }
+  #orangeDiv img { right: 1em; top: -.5em; }
+  #orangeDiv input { width: 10%; line-height: 18px; }
+  #orangeDiv input[type="text"] { margin-bottom: 2em; width: 100%; font-size: 19px; height: 45px; }
+  #orangeDiv input[type="submit"] { width: 100%; height: 50px; font-size: 3.6rem !important; font-size: 4rem !important; letter-spacing: 0.125rem; }
+  #orangeDiv select { margin-bottom: 3em; width: 95% !important; height: 45px; font-size: 19px; height: 44px; margin-left: 6.344px; margin-right: 6.344px; }
+  #orangeDiv #SignUp h2 { padding-left: 1.5rem !important; }
+  .orangeDivIpad { top: -36em !important; margin-bottom: -36em; width: 50% !important; right: 9em !important; overflow: hidden; }
+  #orangeDivIpad #orangeDiv { margin-bottom: -36em !important; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.5rem !important; }
+  #orangeDiv img { display: none; }
+  #orangeDiv .fsBody .fsForm input[type=email].fsField { width: 95% !important; }
+  #orangeDiv .fsBody .fsForm input[type=text].fsField { width: 95% !important; }
+  #orangeDivIpad select { height: 60px !important; }
+  #whiteDiv { top: 0em; padding-top: 0em; }
+  #whiteDiv h4 { margin-top: 1rem; }
+  #footer { bottom: 0px; } }
+@media (min-width: 750px) { #greenDiv .vsuccess { height: 8em !important; }
+  .visible { display: inline; }
+  #video-success { display: inline-block; height: 47em; }
+  #video-success-footer { margin-top: -5em !important; }
+  #video-move-orange { position: relative; }
+  #video-success-footer-original { position: relative; top: -50em; }
+  #townHallPhone { display: none !important; }
+  #townHallTablet { display: normal !important; }
+  #townHallDesktop { display: none !important; }
+  #townHallFooter #footer { height: 23em; margin-top: 20% !important; }
+  .hide { display: none; }
+  #arrow { display: none !important; }
+  #townHallLogo { width: 40% !important; }
+  #ipad-logo { width: 50% !important; padding-top: .2em; }
+  #label42405281 legend span { position: relative; top: -3em; right: 4em; }
+  .whiteDivVideoSuccess { top: -6em !important; padding-top: 0 !important; padding-left: 0em; }
+  .orangeDivTownHall { top: -14em !important; width: 50% !important; right: 9em !important; }
+  .fsBody .fsForm .fsLabel { color: white !important; }
+  .townHallLogo { margin-bottom: 0em; }
+  .townhallfooterp { margin: 0 auto !important; text-align: center !important; width: 50% !important; font-size: 1.3em; }
+  .shineOn { width: 30%; }
+  .townHallHeader { width: 55%; margin: 0 auto; text-align: center !important; padding-left: 0em !important; }
+  .townHallParagraph { width: 55%; text-align: center !important; font-size: 22px; margin: 0 auto; padding-left: 0em !important; }
+  #townHallFooter { margin-top: 0em !important; }
+  #successFooter { margin-top: -5em; bottom: 0px !important; height: 100% !important; }
+  #townHallFooter #footer { height: 100% !important; position: relative; }
+  .content { text-align: left; }
+  #footer { height: 100% !important; bottom: 0px; }
+  #tabletRow { display: initial; }
+  #phoneRow { display: none; }
+  #logo img { width: 40%; text-align: center !important; max-width: 100% !important; }
+  #greenDiv { height: initial; }
+  #greenDiv h4 { line-height: 1em !important; }
+  #greenDivSmall .greenDivTownHall { top: 0em; }
+  #orangeDiv { z-index: 1; width: 33%; float: right; padding: 2em; top: -24em; margin-bottom: -24em; right: 2em; margin: 0; padding-bottom: 0em; border-bottom-left-radius: 50px; border-top-right-radius: 50px; margin-right: 2rem; height: 48em; }
+  #orangeDiv #SignUp h2 { padding-left: 1.5rem !important; font-size: 3.8rem; }
+  #orangeDiv h2 { padding-left: 0; padding-bottom: .5em !important; padding-left: .5em; margin: auto; padding-bottom: 0; padding-top: 0; }
+  #orangeDiv img { right: 0em; top: -1.5em; position: relative; display: initial; }
+  #orangeDiv input[type="text"] { margin-bottom: 2em; width: 100%; font-size: 19px; height: 45px; }
+  #orangeDiv input[type="text"]:last-child { margin-bottom: 2em; }
+  #orangeDiv input[type="submit"] { width: 100%; height: 50px; font-size: 3.6rem !important; font-size: 4rem !important; letter-spacing: 0.125rem; }
+  #orangeDiv select { margin-bottom: 2em; width: 95% !important; height: 45px; font-size: 19px; margin-left: 6.344px; margin-right: 6.344px; background-color: #fff !important; }
+  #orangeDiv .fsBody .fsForm input[type=email].fsField { margin-bottom: 5.5em; }
+  .orangeDivTownHall { height: 45em !important; }
+  .orangeDivTownHall input[type="text"] { height: 50px !important; }
+  .orangeDivTownHall input[type="email"] { height: 50px !important; }
+  .orangeDivTownHall .fsBody .fsForm select.fsField { height: 50px !important; }
+  .orangeDivTownHall .fsBody .fsForm input[type=email].fsField { margin-bottom: 2.5rem !important; }
+  .orangeDivTownHall .fsBody .fsForm .fsSection { top: 1em !important; }
+  .orangeDivTownHall .fsBody .fsForm .fsLabel { margin-bottom: 3em; }
+  .orangeDivTownHall .fsForm fieldset { display: initial !important; }
+  .orangeDivTownHall #label42405281 legend span { display: initial !important; top: 0em; right: 0em; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.9rem !important; }
+  #orangeDiv .orangeDivIpad { margin-bottom: -35em !important; }
+  #orangeDivIpad input[type="text"] { height: 60px !important; margin-bottom: 3em !important; }
+  #orangeDivIpad input[type="email"] { height: 60px !important; margin-bottom: 3em !important; }
+  #orangeDivIpad select { margin-bottom: 3em  !important; }
+  #orangeDivIpad #label42527564 { display: none; }
+  #orangeDivIpad .fsBody .fsForm .fsSection { position: relative; top: -2em; }
+  .orangeDivIpad { top: -38em !important; margin-bottom: -36em !important; width: 50% !important; right: 9em !important; height: 41em !important; padding-top: 5em !important; }
+  #SignUp h2 { padding-left: 0rem !important; }
+  img { display: initial; padding-top: 0em; }
+  .fsBody .fsForm .fsOptionLabel { margin-bottom: 1.5em !important; }
+  .fsBody .fsForm .fsOptionLabel:last-child { margin-bottom: .5em !important; }
+  .fsBody .fsForm input[type=text].fsField { width: 100% !important; }
+  .fsBody label { margin-bottom: 0em !important; top: -2em !important; position: relative !important; }
+  .fsBody .fsForm input[type=email].fsField { margin-bottom: 4.5em; height: 45px; }
+  .fsborderradius .fsForm .fsSubmit { margin-bottom: 9em !important; }
+  .fsborderradius .fsForm .fsSubmit { max-width: 100% !important; width: initial; }
+  #whiteDiv { top: 0em; margin: 0em; padding-top: 2em; padding-bottom: 2em; }
+  #whiteDiv h4 { text-align: left; margin-left: 2rem; padding-left: 2rem; font-size: 3.8rem; line-height: 1em; margin-top: 0em; letter-spacing: 0rem; }
+  #whiteDiv img { padding-left: 2rem; margin-left: 2rem; }
+  .whiteDivVideoSuccess .six { margin-left: 25% !important; }
+  .whiteDivVideoSuccess .video-container { margin-left: 0em; }
+  .whiteDivVideoSuccess img { margin-left: 0em !important; padding-left: 0em !important; }
+  #greenDiv p { text-align: left; padding-left: 2rem; font-weight: 500; }
+  #greenDiv h4 { text-align: left; padding-left: 2rem; font-weight: 500; }
+  #greenDivSmall .greenDivIpad { height: 19em; position: relative; top: 2.5em; }
+  #footer { font-weight: 300 !important; margin-top: 0; bottom: 0px; height: 8em; text-align: left; padding-top: 3em; padding-bottom: 3em; }
+  #footer hr { display: none; }
+  .popup { height: 87vh !important; }
+  .popup .content { height: 70% !important; max-height: 70vh; }
+  #footer #phoneDate { display: none; }
+  #footer #phoneDescription { display: none; }
+  #footer #phonePolicy { display: none; }
+  #footer #tabletRow { padding-top: 1.3em; width: 50%; margin: 0 auto; text-align: center; }
+  #footer #tabletRow p { width: 50%; margin: 0 auto; }
+  #footer #tabletDescription { display: block; text-align: center; }
+  #footer #tabletDate { display: block; text-align: center; padding-right: 2em; text-align: right; }
+  #footer #tabletPolicy { display: block; text-align: center; text-align: left; padding-left: 2em; }
+  #footerSuccess #phoneDate { display: none; }
+  #footerSuccess #phoneDescription { display: none; }
+  #footerSuccess #phonePolicy { display: none; }
+  #footerSuccess #tabletRow { padding-top: 1.2em; margin-left: 10em; margin-right: 10em; }
+  #footerSuccess #tabletDescription { display: block; text-align: center; }
+  #footerSuccess #tabletDate { display: block; text-align: right; border-right: 1px solid white; padding-right: 1em; }
+  #footerSuccess #tabletPolicy { display: block; text-align: center; text-align: left; padding-left: 2em; }
+  .popup { width: 85%; height: 85vh; }
+  .popup .content { text-align: left; font-size: 19px; overflow: auto; }
+  .popup img { width: initial; width: 15%; }
+  .video-container { margin-left: 4rem; }
+  #greenDivSuccess h4 { font-size: 3.8rem; font-weight: 500; font-family: "Halant"; width: 80%; }
+  .whiteDivVideoSuccess { top: -6em !important; }
+  #greenDivSmall .greenDivTownHall { height: 7em; }
+  #whiteDivSuccess { margin: 1em; }
+  #whiteDivSuccess img { max-width: 100%; display: block; margin-left: auto; margin-right: auto; padding-bottom: 3.5rem; }
+  #video-success #orangeDiv { top: 5em; margin-right: 11em; width: 40%; }
+  #orangeDiv .fsBody .fsForm .fsLabel { position: relative !important; top: -4em !important; margin-bottom: 1em; } }
+/* iPads (landscape) -------------------------------------------------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) { .fsboxshadow .fsBody .fsForm { box-shadow: none; position: initial; top: 0em !important; } }
+@media (min-width: 1000px) { #video-success #orangeDiv { margin-right: 19em; height: 49em; }
+  .pushdowns { padding-top: 2.5em; }
+  .popup { height: 89vh !important; }
+  .popup .content { max-height: 58vh; }
+  #logo { padding: 0; }
+  #logo img { padding-left: 7em; width: 28%; padding-top: 1em; padding-bottom: 1em; }
+  #greenDiv { padding: 1em 5.5em; }
+  h4 { font-family: "Halant"; font-size: 26px; width: 100%; padding-left: 5.5em; text-align: left !important; }
+  #greenDiv p { font-size: .8em; }
+  #orangeDiv { height: 53em; margin-bottom: -53em !important; width: 22%; margin-right: 25em; right: 0; top: -24em; }
+  #orangeDiv #SignUp h2 { padding-left: 2rem !important; margin-bottom: .5em; }
+  #orangeDiv img { padding: 0em; display: initial; right: 0em; top: 1em; }
+  #orangeDiv .fsBody label { margin-bottom: 0em !important; }
+  #orangeDiv input[type="submit"] { font-size: 3rem !important; }
+  .orangeDivLanding { height: 53em !important; }
+  #whiteDiv { padding-left: 9em; }
+  #whiteDiv h4 { font-size: 3.8rem; margin-bottom: 2rem !important; }
+  #whiteDiv .video-container iframe, #whiteDiv .video-container object, #whiteDiv .video-container embed { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
+  #whiteDiv .video-container { padding-bottom: 45.25%; }
+  .whiteDivVideoSuccess { padding-right: 7em; }
+  .whiteDivVideoSuccess img { padding-right: 7em; }
+  .whiteDivVideoSuccess iframe { padding-right: 7em; }
+  .orangeDivLanding { margin-right: 7em !important; }
+  .orangeDivTownHall { margin-right: 9em !important; width: 40% !important; top: -14em !important; }
+  .orangeDivTownHall .fsSubmitButton { width: 80% !important; }
+  .orangeDivTownHall { height: 49em !important; }
+  .orangeDivTownHall #label42405281 legend span { top: -2em !important; }
+  .orangeDivTownHall input[type="text"]:last-child { margin-bottom: 2em !important; }
+  .orangeDivTownHall .fsBody .fsForm input[type=email].fsField { margin-bottom: 3.5rem !important; }
+  .orangeDivTownHall fieldset { display: initial !important; }
+  .orangeDivTownHall .fsBody .fsForm .fsOptionLabel:last-child { font-size: 1.9rem !important; }
+  .orangeDivTownHall .fsForm fieldset { width: 100%; }
+  .orangeDivTownHall .fsBody .fsForm .fsLabel { margin-bottom: 4em !important; }
+  .orangeDivTownHall .fsBody .fsOption .fsLabel { margin-left: 3.5em; }
+  #townHallFooter #footer { margin-top: 3% !important; }
+  .townHallHeader { padding-left: 0em !important; }
+  .townHallParagraph { padding-left: 0em !important; }
+  #townHallDesktop { display: initial !important; }
+  .whiteDivVideoSuccess { top: -18em !important; }
+  #whiteDivSuccess p { text-align: left; padding-left: 4em; }
+  #greenDivSuccess img { display: none; }
+  .popup { height: 94vh; }
+  .popup .content { max-height: 63vh; }
+  #townHallLogo { padding-left: 0% !important; }
+  .townHallLogo { text-align: center !important; }
+  #townHallTablet { display: none; }
+  #left { float: left; }
+  #left p { margin-top: 0em !important; }
+  #right img { width: 25%; margin-top: 1.5em; }
+  .shineOn { margin-bottom: 0em; width: 50%; }
+  #desktopRow p { margin-top: 4rem; }
+  #orangeDiv .fsBody .fsForm .fsLabel { position: relative !important; top: -4em !important; margin-bottom: 1em; }
+  #townHallDesktop { display: initial !important; }
+  #desktopRow { display: initial !important; }
+  .container { max-width: 100%; }
+  #label42405281 legend span { position: relative; top: -4.5em; right: 3em; }
+  #logo { text-align: left; }
+  #logo img { width: 30%; padding-left: 8.5em; }
+  #townHallLogo { width: 30% !important; }
+  #greenDiv { padding: 2em; padding-left: 4em; }
+  #greenDiv h4 { padding-left: 0; }
+  #greenDiv p { padding-left: 0; font-size: 1.9rem; line-height: 32px; }
+  .greenDivTownHall { padding-left: 2em !important; }
+  .fsboxshadow .fsBody .fsForm { box-shadow: none; position: relative; }
+  #greenDivSuccess h4 { padding-left: 0em; }
+  #orangeDiv h2 { padding-top: .5em; padding-bottom: .2em !important; }
+  #orangeDiv img { right: 0em; top: 1em; }
+  #orangeDiv .fsSubmitButton { width: 100%; margin-bottom: -1.5em; padding-top: 1em !important; position: relative; top: -1.5em; }
+  #orangeDiv { width: 25%; top: -29em; margin-right: 18em; }
+  #orangeDiv select { margin-bottom: 2em; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.6rem; margin-bottom: 1em !important; }
+  #orangeDiv input[type="text"]:last-child { margin-bottom: 3em; height: 45px; }
+  #orangeDiv .fsBody .fsForm input[type=email].fsField { margin-bottom: 5.5em; height: 45px !important; }
+  #orangeDiv select { margin-bottom: 3em; height: 45px !important; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel:last-child { margin-bottom: .5em !important; }
+  #whiteDiv { padding-left: 7em; }
+  #whiteDiv h4 { margin-left: 0; padding-left: 0em; }
+  #whiteDiv .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; margin-left: 0; }
+  #whiteDiv .video-container iframe, #whiteDiv .video-container object, #whiteDiv .video-container embed { position: absolute; top: 0; left: 0; width: 60%; height: 60%; }
+  #video-move-orange { height: 37em; margin-left: 8em; }
+  .orange-video-content { height: 48em !important; }
+  #video-success-footer { margin-top: -8em !important; }
+  #right img { width: 100%; }
+  #left { width: 30%; padding-left: 20%; text-align: center; }
+  .align-under-shine .one { font-size: 19px; }
+  .align-under-shine .one { margin-bottom: 0px; }
+  #right { width: 30%; padding-right: 20%; float: right; }
+  #desktopRow p { clear: both; } }
+@media (min-width: 1051px) { #orangeDiv { height: 45em !important; } }
+@media screen and (min-width: 1366px) { #label42405281 legend span { right: 3.5em; }
+  .townHallLogoContainer { text-align: center; }
+  .townHallLogoContainer img { padding-left: 0em !important; }
+  #townHallFooter #footer { margin-top: 2em; }
+  #greenDiv { padding-left: 9em; }
+  .townHallHeader { width: 55%; margin: 0 auto; text-align: center !important; }
+  .greenDivTownHall { padding-left: 0em !important; }
+  .greenDivTownHall { padding-right: 0em !important; }
+  .orangeDivTownHall { margin-right: 29em !important; right: 0em !important; margin-bottom: -12em !important; border-bottom-left-radius: 60px !important; border-top-right-radius: 70px !important; }
+  #greenDiv .greenDivTownHall { padding-left: 0em !important; }
+  #greenDivSuccess h4 { padding-left: 3.5em !important; }
+  .fsboxshadow .fsBody .fsForm { box-shadow: none; position: relative !important; top: 0 !important; }
+  #orangeDiv { height: 47em !important; top: -24em; margin-bottom: -26em !important; width: 18%; }
+  #orangeDiv #SignUp h2 { padding-left: 4rem !important; }
+  .orangeDivTownHall { top: -20em; width: 32% !important; margin-bottom: -49em !important; }
+  #footer { bottom: 0px; }
+  .popup { height: 88vh !important; }
+  .popup .content { max-height: 45vh; }
+  .shineOn { width: 30%; }
+  .logoSuccess { padding-left: 2em !important; }
+  .orange-video-content { top: -20em !important; }
+  #video-success { margin-left: -9em !important; }
+  #video-success #orangeDiv { margin-left: 2em; width: 32%; }
+  #right img { width: 75% !important; margin-top: 1em; } }
+@media (min-width: 1200px) { #right img { Width: 95%; }
+  #logo img { width: 20%; padding-left: 13em; }
+  .logoSuccess img { padding-left: 14.5em; }
+  #greenDiv { padding-left: 7.5em; }
+  #greenDivLargeOnly #greenDiv { padding-left: 9.24em; }
+  #orangeDiv { width: 20%; top: -26em; margin-top: -22em; height: 52em !important; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.6rem !important; padding-bottom: .5em; }
+  #orangeDiv img { right: 0em; top: 1em; }
+  .orangeDivLanding { margin-right: 13em !important; }
+  #greenDivLargeOnly #greenDiv p { width: 100%; }
+  /*Switch Lady Image*/
+  #hide { display: none; }
+  #Big { display: initial !important; width: 100%; }
+  /*endSwitch Lady Image*/
+  #whiteDiv { padding-left: 13em; }
+  #greenDivSuccess h4 { padding-left: 2.5em; }
+  #whiteDivSuccess p { padding-left: 9em; }
+  #video-success { margin-left: -3em; top: -12em; width: 96%; }
+  .whiteDivVideoSuccess { padding-right: 13em; top: -14em !important; }
+  #whiteDiv .whiteDivVideoSuccess:last-child { margin-bottom: -14em; }
+  #video-success-footer { margin-top: -14em !important; } }
+@media (min-width: 1400px) { #video-success { margin-left: 4em; top: -14em; width: 82%; }
+  #video-success #orangeDiv { width: 40%; }
+  .fsboxshadow .fsBody .fsForm { box-shadow: none; position: initial !important; }
+  #logo img { width: 25% !important; }
+  #greenDiv .greenDivTownHall { height: 8em !important; }
+  #orangeDiv { height: 54.5em !important; top: -25em; margin-bottom: -25em !important; width: 20%; }
+  #orangeDiv img { padding: 0em; display: initial; right: 0em; top: 1.5em; }
+  #orangeDiv #SignUp h2 { padding-left: 4rem !important; }
+  #greenDiv { padding-left: 7.5em; }
+  .popup { height: 85vh; }
+  .popup .content { max-height: 50vh; }
+  #townHallLogo img { width: 30% !important; }
+  .orangeDivTownHall { top: -18em !important; }
+  .orangeDivTownHall { height: 49.5em !important; }
+  .whiteDivVideoSuccess { top: -16em !important; }
+  #video-success { left: 13em; } }
+@media (min-width: 1600px) { #label42405281 legend span { right: 4.5em; }
+  #orangeDiv { top: -25em; height: 56.5em !important; }
+  #orangeDiv #SignUp h2 { padding-left: 4rem !important; }
+  #orangeDiv input[type="text"]:last-child { margin-bottom: 2.5em; }
+  #video-success { margin-left: -14em !important; }
+  #video-success #orangeDiv { height: 50.5em !important; }
+  #video-success #orangeDiv { width: 35%; }
+  #townhallFooter #footer { margin-top: 0em !important; }
+  .popup { height: 90vh; } }
+@media (min-width: 1920px) { #greenDivLargeOnly .greenDivTownHall h4 { text-align: center !important; }
+  #greenDivLargeOnly .greenDivTownHall p { text-align: center !important; }
+  #greenDivSuccess { padding-left: 3.5em; }
+  #greenDivLargeOnly #greenDiv { padding-left: 7.24em; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel:last-child { margin-bottom: -0.5em !important; }
+  #orangeDiv .fsBody .fsForm .fsLabel { top: -4em !important; }
+  #orangeDiv input[type="text"]:last-child { margin-bottom: 2em; }
+  #label42405281 legend span { right: 6em; }
+  #orangeDiv { top: -21em !important; margin-bottom: -21em !important; height: 56em !important; margin-right: 16em !important; }
+  #orangeDiv input { width: 10%; }
+  #orangeDiv select { margin-bottom: 2em; }
+  #orangeDiv #SignUp h2 { padding-left: 7.5rem !important; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { font-size: 1.9rem !important; }
+  #greenDivSmall { display: none; }
+  #greenDivLargeOnly { display: initial; }
+  #greenDivSuccess h4 { text-align: left; padding-left: 5.5em; width: 100%; }
+  .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 20% !important; height: 20% !important; }
+  .video-container { padding-bottom: 45.25%; }
+  #footer { padding-top: 1.5em; padding-bottom: 0em !important; bottom: 0px; margin-top: 0em !important; height: 6em !important; }
+  #footerSuccess { height: 8.2em !important; padding-top: 0em; padding-bottom: 2em; bottom: 0px; }
+  .popup { height: 75vh; }
+  .popup .content { text-align: left; height: 34vh; }
+  #video-success { top: 10em; height: 0em; }
+  #video-success #orangeDiv { width: 30%; right: 9em; top: -27em !important; height: 47em !important; }
+  #townHallFooter #footer { margin-top: 7% !important; }
+  #right img { width: 60% !important; }
+  #desktopRow p:last-child { margin-bottom: 2em; }
+  .whiteDivVideoSuccess { top: -4em !important; width: 50%; margin-left: 19em !important; } }
+@media (min-width: 2560px) { #label42405281 legend span { right: initial; }
+  #orangeDiv { height: 59em !important; width: 16%; top: -13em !important; }
+  #orangeDiv #SignUp h2 { padding-left: 10.5rem !important; }
+  #orangeDiv input[type="text"] { height: 65px; }
+  #orangeDiv .fsBody .fsForm input[type=email].fsField { height: 65px; }
+  #orangeDiv select { height: 65px !important; margin-bottom: 4.5em; }
+  .popup .content { font-size: 28px; }
+  .popup img { width: 15%; }
+  #orangeDiv .fsSubmitButton { width: 85% !important; }
+  #orangeDiv .fsBody .fsForm .fsOptionLabel { margin-top: 1em; } }
+#orangeDiv .orangeDivTownHall { height: 48.5em !important; }
+
+/*# sourceMappingURL=style.css.map */
