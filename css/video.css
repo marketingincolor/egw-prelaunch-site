@@ -1,12 +1,44 @@
+#share {
+    background-color: #ef7f0a;
+    border-top: 2px solid #fcc151;
+    border-left: 2px solid #fcc151;
+    border-bottom: 2px solid #df5b00;
+    border-right: 2px solid #df5b00;
+    border-radius: 15px 15px;
+    color: white;
+    font-family:'roboto',sans-serif;
+    font-weight:bold;
+    text-align:center;
+    padding: 3em;
+    float: initial;
+}
+
+#speaker img {  }
+
+#share h1 {
+    font-size: 1.65em;
+    line-height: 1em;
+    text-align: center;
+    padding-top:1em;
+}
+
+#social-icons {
+    padding-top:1em;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 .visible { display:initial; }
 .hidden { display:none; }
 #logo img {padding:1em;}
-#greenDiv { background-color: #98ac36; color: #fff; font-family: "Halant"; font-weight: 500; font-size: 26px; line-height: 1em;padding:1em 1em 3em;}
+#greenDiv { background-color: #98ac36; color: #fff; font-family: "Halant"; font-weight: 500; font-size: 2em; line-height: 1em;padding:1em 1em 3em;}
 #greenDiv h3 {
-font-size: 1.65em;
-font-family: halant;
-font-weight: 500;
+    line-height: 1em;
+    font-size: 1.65em;
+    font-family: halant;
+    font-weight: 500;
 }
+#greenDiv p {font-size: 30px; }
 .green-bg { background-color:green; }
 .gray-bg { background-color:#4c4c4c; }
 .orange-bg { background-color:#ef7f0a; }
@@ -23,8 +55,9 @@ font-weight: 500;
 #arrow { max-width:40%; padding-bottom: 1em;}
 .town-hall-logo { text-align:center; }
 #footer {bottom:0; font-family:"roboto",sans-serif; color:white;}
+#footer .townhallfooterp a {color:white;}
 .hidden-content {top:-3em; position:relative; margin-bottom:-1em; padding:1em;}
-.landing-form {top:-3em; position:relative; margin-bottom:-1em; padding:1em;}
+.landing-form {top:-7em; position:relative; margin-bottom:-6em; padding:1em;}
 #content-footer { padding:1em 0;}
 #shineon-logo { padding:1em; }
 #social-media { padding:1em; }
@@ -62,73 +95,78 @@ label.fsOptionLabel {border:none !important;}
 }
 
     }}
-/*popup*/
-.button:hover {
-  background: $darkOrange;
-}
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index:1;
-}
+    /*popup*/
+    .button:hover {
+      background: $darkOrange;
+    }
 
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      z-index:1;
+    }
 
-.popup {
-  margin: 25px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 50%;
-  position: relative;
-  z-index:9999;
-  height:90vh;
-  img {width:60%;}
-}
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
 
-.popup h2 {
-  margin-top: 0;
-  color: $gray;
-  font-family: $headlines;
-  font-weight:bold;
-  text-align: center;
-}
+    .popup {
+    margin: 25px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 90%;
+    position: relative;
+    z-index:9999;
+    height:90vh;
+    img {width:60%;}
+    }
 
-.popup .close {
-  position: absolute;
-  top: -10px;
-  right: 8px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
+     #errata-policy a { color: white; }
+     .townhallfooterp a { color:white; }
 
-.popup .close:hover {
-  color: $darkOrange;
-}
+    .popup .content a { color: #e57500; }
+    .popup h2 {
+      margin-top: 0;
+      color: #4c4c4c;
+      font-family: $headlines;
+      font-weight:bold;
+      text-align: center;
+    }
 
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-  text-align:center;
-  font-family:'Roboto',sans-serif;
-  color:black;
-  height:auto;
-  max-height: 40vh;
-}
+    .popup .close {
+      position: absolute;
+      top: -10px;
+      right: 8px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #e57500;
+    }
+
+    .popup .close:hover {
+      color: #e57500;
+    }
+
+    .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    text-align:center;
+    font-family:'Roboto',sans-serif;
+    color:black;
+    height:auto;
+    max-height: 60vh;
+    }
 
 .video-container {
     position: relative;
@@ -156,13 +194,19 @@ label.fsOptionLabel {border:none !important;}
 }
 
 /* Medium and up */
-@media screen and (min-width: 40em) {}
+@media screen and (min-width: 40em) {
+
+    .popup .content { text-align:left !important; }
+
+}
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {}
 
 /* Large and up */
-@media screen and (min-width: 64em) {}
+@media screen and (min-width: 64em) {
+
+}
 
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {}

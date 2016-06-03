@@ -174,13 +174,33 @@
 
                     <div>&nbsp;</div>
 
-                    <!---whiteDiv Social Media --->
-                    <div id="whiteDiv" class="row whiteDivVideoSuccess">
-                        <div class="small-12 medium-8 large-6 columns small-centered">
-                            <img src="images/ShareButton.png" alt="Social Media Share Buttons"/>
+                    <!--- shareBox --->
+                    <div id="share" class="small-12 medium-6 large-4 columns small-centered">
+
+                        <div id="speaker" class="row">
+                            <img src="images/megaphone.png"/>
+                                <h1>Please share with your family and friends!</h1>
                         </div>
-                    </div>
-                    <!---/whiteDiv Social Media --->
+
+                        <div id="social-icons" class="row small-centered">
+                            <div id="mail" class="small-4 columns">
+                                <a href="mailto: ?subject=Thought you'd like this&body=Enjoy this article from Evergreen Wellness www.myevergreenwellness.com/benefits-of-laughter">
+                                    <img src="images/mail.png"/>
+                                </a>
+                            </div>
+
+                            <div id="facebook" class="small-4 columns">
+                                <img src="images/facebook.png"/>
+                            </div>
+
+                            <div id="twitter" class="small-4 columns">
+                                <a href="http://twitter.com/home?status=Benefits%20of%20Laughter%20http://myevergreenwellness.com/benefits-of-laughter" target="_blank" onclick="javascript:window.open(this.href,
+      '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                                <img src="images/twitter.png"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!---/sharebox--->
 
                 </div> <!---/columns-hidden-content--->
             </div> <!--/row--->
