@@ -1,5 +1,4 @@
 ![EGW Logo](http://myevergreenwellness.com/images/EvergreenWellnessLogoPhone.png)
-# egw-prelaunch-site
 ======
 Contributors: adamdoe@github, eddt@github
 
