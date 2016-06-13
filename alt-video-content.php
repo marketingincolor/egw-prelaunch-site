@@ -182,7 +182,7 @@
                                 <h1>Please share with your family and friends!</h1>
                         </div>
 
-                        <div id="social-icons" class="row small-centered valign">
+                        <div id="social-icons" class="row small-centered">
                             <div id="mail" class="small-4 columns">
                                 <a href="mailto: ?subject=Thought you'd like this&body=Enjoy this article from Evergreen Wellness www.myevergreenwellness.com/benefits-of-laughter">
                                     <img src="images/mail.png"/>
