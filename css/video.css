@@ -28,6 +28,13 @@
     padding-right: 20%;
 }
 
+#social-icons img {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  height:2em;
+}
+
 .visible { display:initial; }
 .hidden { display:none; }
 #logo img {padding:1em;}
