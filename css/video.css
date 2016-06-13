@@ -63,7 +63,7 @@
 #social-media { padding:1em; }
 #errata div { display:inline-block; }
 #errata a { color:inherit; text-decoration:underline; }
-.shine-on { max-width:70%; }
+.shine-on { max-width:50%; }
 
 /*foundation overrides*/
 p { margin-bottom:.5em; }
@@ -105,7 +105,6 @@ label.fsOptionLabel {border:none !important;}
     background-size: 15px 15px;
 }
 
-    }}
 
     /*popup*/
     .button:hover {
