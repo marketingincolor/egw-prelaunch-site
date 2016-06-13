@@ -60,7 +60,8 @@
 .landing-form {top:-7em; position:relative; margin-bottom:-6em; padding:1em;}
 #content-footer { padding:1em 0;}
 #shineon-logo { padding:1em; }
-#social-media { padding:1em; }
+#social-media { padding:1em; padding-bottom: 3em;}
+#social-icons img {display:inline; vertical-align: middle;}
 #errata div { display:inline-block; }
 #errata a { color:inherit; text-decoration:underline; }
 .shine-on { max-width:50%; }
