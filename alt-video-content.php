@@ -229,7 +229,7 @@
             </div>
         </div>
 
-        <!-- End Document
+        <!-- SharpSpring Comment for Fixing Issue #2
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
         <script type="text/javascript">
