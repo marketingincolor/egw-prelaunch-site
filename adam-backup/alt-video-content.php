@@ -91,15 +91,15 @@
         <!-- Primary Page Layout
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-        <!--logo-->
+        <!---logo--->
         <div class="row">
             <div id="logo" class="town-hall-logo small-12 columns">
                 <img id="townHallLogo" src="images/EvergreenWellnessLogoPhone.png">
             </div>
         </div>
-        <!--/logo-->
+        <!---/logo--->
 
-        <!--container-->
+        <!---container--->
         <div id="landingForm" class="container">
 
             <!--greenbar-->
@@ -123,16 +123,16 @@
                         <div class="row">
                             <div class ="small-10 columns small-offset-1">
 
-                                <!--LearnMore&Arro-->
+                                <!---LearnMore&Arrow--->
                                 <div id="SignUp" class="row">
                                     <div class="small-8 columns text-center"><h2>Learn More</h2></div>
                                     <div class="small-4 columns text-left"><img id="arrow" src="images/arrowPhone.png"></div>
                                 </div>
-                                <!--/LearnMore&Arrow-->
+                                <!---/LearnMore&Arrow--->
 
                                 <div class="row">
                                     <div class="small-12 columns small-centered">
-                                        <script type="text/javascript" src="https://marketingincolor.formstack.com/forms/js.php/video_content_one"></script><noscript><a href="https://marketingincolor.formstack.com/forms/video_content_one" title="Online Form">Online Form - EGW Video Content</a></noscript>
+                                        <script type="text/javascript" src="https://marketingincolor.formstack.com/forms/js.php/untitled_form_14_copy"></script><noscript><a href="https://marketingincolor.formstack.com/forms/untitled_form_14_copy" title="Online Form">Online Form - EGW Video Content</a></noscript>
                                     </div>
                                 </div>
 
@@ -143,9 +143,9 @@
 
                 </div>
             </div> <!--/landingForm-->
-        </div> <!--/container-->
+        </div> <!---/container--->
 
-        <!-- hiddenContent-->
+        <!--- hiddenContent--->
         <div  id="hiddenContent"  class="container">
 
             <!--greenbar-->
@@ -158,7 +158,7 @@
 
             <div class="row">
 
-                <!--columns-hidden-content-->
+                <!---columns-hidden-content--->
                 <div class="columns hidden-content">
 
                     <!--whiteDiv Video -->
@@ -174,7 +174,7 @@
 
                     <div>&nbsp;</div>
 
-                    <!-- shareBox -->
+                    <!--- shareBox --->
                     <div id="share" class="small-12 medium-6 large-4 columns small-centered">
 
                         <div id="speaker" class="row">
@@ -190,21 +190,7 @@
                             </div>
 
                             <div id="facebook" class="small-4 columns">
-                            <?php
-                                            function getUrl() {
-                                                $url  = isset( $_SERVER['HTTPS'] ) && 'on' === $_SERVER['HTTPS'] ? 'https' : 'http';
-                                                $url .= '://' . $_SERVER['SERVER_NAME'];
-                                                $url .= in_array( $_SERVER['SERVER_PORT'], array('80', '443') ) ? '' : ':' . $_SERVER['SERVER_PORT'];
-                                                $url .= $_SERVER['REQUEST_URI'];
-                                                return $url;
-                                            }
-                                            // Print Share link on Page
-                                            $encoded_url = urlencode( getUrl() );
-                                            if ( !empty($encoded_url) ){ ?>
-                                                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $encoded_url; ?>" target="_blank" id="facebook-share" onclick="javascript:window.open(this.href,
-                      '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                                 <img src="images/facebook.png"/>
-                                <?php } ?>
                             </div>
 
                             <div id="twitter" class="small-4 columns">
@@ -214,10 +200,10 @@
                                 </a>
                             </div>
                         </div>
-                    </div> <!--/sharebox-->
+                    </div> <!---/sharebox--->
 
-                </div> <!--/columns-hidden-content-->
-            </div> <!--/row-->
+                </div> <!---/columns-hidden-content--->
+            </div> <!--/row--->
         </div><!--/hiddenContent-->
 
         <!--footer-->
@@ -235,13 +221,9 @@
         <script type="text/javascript">
             var __ss_noform = __ss_noform || [];
             __ss_noform.push(['baseURI', 'https://app-3QMYANU21K.marketingautomation.services/webforms/receivePostback/MzawMDG2NDQxAwA/']);
-            __ss_noform.push(['endpoint', 'cabbbce7-4caf-4c61-85f6-b30b0c929561']);
+            __ss_noform.push(['endpoint', '9832d7ab-cf84-478d-9cd7-08abf902fd67']);
         </script>
         <script type="text/javascript" src="https://koi-3QMYANU21K.marketingautomation.services/client/noform.js?ver=1.24" ></script>
-
-
-
-
 
         <!-- Foundation
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
