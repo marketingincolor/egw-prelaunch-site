@@ -76,5 +76,4 @@ images/
 
 
 ####Changelog
-There's something here!
-Changes are right here.
+
