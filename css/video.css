@@ -89,9 +89,20 @@ label.fsOptionLabel {border:none !important;}
 .fsBody .fsForm .fsLabel {padding-bottom:1em !important;}
 .fsFieldFocused {background-color: transparent !important; }
 #orangeDiv select {
-    background: url('images/dropdown.png')  no-repeat;
+    background-color: white !important;
+    margin-bottom: 2em;
+    width: 85%;
+    color: gray;
+    text-align: center !important;
+    font-size: 19px !important;
+    font-weight: bold !important;
+    color: #9f9f9f;
+    border: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../images/dropdown.png") no-repeat;
     background-position: 90% 50%;
-    background-size:15px 15px;
+    background-size: 15px 15px;
 }
 
     }}
