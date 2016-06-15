@@ -46,7 +46,7 @@
                   //exposed values incude SharpSpring ID, First Name, Last Name, Email, Website, Lead Status
                   var name = contact['First Name'];
                   var elem = document.getElementById('dynamicContentID');
-                  elem.innerHTML = '<h3>Name of the Video Goes here (' + name + ')</h3>';
+                  elem.innerHTML = '<h3>Choosing the Right Bike</h3>';
 
                   document.getElementById('hiddenContent').className += " visible";
                   document.getElementById('landingForm').className += " hidden";
@@ -184,7 +184,7 @@
 
                         <div id="social-icons" class="row small-centered">
                             <div id="mail" class="small-4 columns">
-                                <a href="mailto: ?subject=Thought you'd like this&body=Enjoy this article from Evergreen Wellness www.myevergreenwellness.com/benefits-of-laughter">
+                                <a href="mailto: ?subject=Thought you'd like this&body=Enjoy this article from Evergreen Wellness www.myevergreenwellness.com/choosing-the-right-bike">
                                     <img src="images/mail.png"/>
                                 </a>
                             </div>
@@ -208,7 +208,7 @@
                             </div>
 
                             <div id="twitter" class="small-4 columns">
-                                <a href="http://twitter.com/home?status=Benefits%20of%20Laughter%20http://myevergreenwellness.com/benefits-of-laughter" target="_blank" onclick="javascript:window.open(this.href,
+                                <a href="http://twitter.com/home?status=Choosing%20the%20Right%20Bike%20-%20http://myevergreenwellness.com/choosing-the-right-bike" target="_blank" onclick="javascript:window.open(this.href,
       '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                                 <img src="images/twitter.png"/>
                                 </a>
