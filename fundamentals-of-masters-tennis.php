@@ -1,4 +1,4 @@
-F<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
 
@@ -165,7 +165,7 @@ F<!DOCTYPE html>
                     <div id="whiteDiv" class="row whiteDivVideoSuccess">
                         <div class="small-12 medium-8 large-6 columns small-centered">
                             <div class="video-container">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rsWGnogqsA4" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://youtube.com/embed/3WWwHUX7BWg?rel=0" frameborder="0" allowfullscreen></iframe>
 
                             </div>
                         </div>

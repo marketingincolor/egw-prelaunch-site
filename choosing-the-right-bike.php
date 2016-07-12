@@ -165,7 +165,7 @@
                     <div id="whiteDiv" class="row whiteDivVideoSuccess">
                         <div class="small-12 medium-8 large-6 columns small-centered">
                             <div class="video-container">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/cNe_i0exxgs" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ecGrNCq0vaI?rel=0" frameborder="0" allowfullscreen></iframe>
 
                             </div>
                         </div>
